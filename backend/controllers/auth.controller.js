@@ -1,7 +1,7 @@
 //obsługa ścieżek
 
 export const signup = async (req,res) => {
-    res.send("Sign up route called");
+    res.send("Sign up");
 }
 
 export const login = async (req,res) => {
