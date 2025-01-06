@@ -10,6 +10,8 @@ import dotenv from "dotenv";
 //safe routes
 import authRoutes from "./routes/auth.route.js";
 
+import { connectDB } from "./lib/db.js"
+
 //function to start connecting with env file
 dotenv.config();
 
@@ -24,4 +26,9 @@ app.use("/api/auth", authRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
+
+connectDB()
+
 });
+
+//51dBSH2cybs0yEk3
