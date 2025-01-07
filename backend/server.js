@@ -21,6 +21,8 @@ const app = express();
 // environment variables: read port 5000 if env file undefined
 const PORT = process.env.PORT || 5000;
 
+app.use(express.json()); //very important thing, allows to read json req.body
+
 //path to singup: /api/auth/signup
 app.use("/api/auth", authRoutes)
 
