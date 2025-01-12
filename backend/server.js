@@ -32,5 +32,3 @@ app.listen(PORT, () => {
 connectDB()
 
 });
-
-//51dBSH2cybs0yEk3
