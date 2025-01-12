@@ -64,6 +64,7 @@ userSchema.methods.comparePassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 };
 
+// utworzenie usera musi być na końcu pliku, żeby funkcja hashPassword działała
 const User = mongoose.model("User", userSchema);
 
 

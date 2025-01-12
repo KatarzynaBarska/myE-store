@@ -9,3 +9,5 @@ console.log('Error connecting to MOGODB', error.message);
 process.exit(1);
     }
 }
+
+//Połączenie z baza danych
