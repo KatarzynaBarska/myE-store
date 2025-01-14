@@ -5,6 +5,7 @@ import express from "express";
 
 //dotenv - extension for env file
 import dotenv from "dotenv";
+import cookieParser from "cookie-parser";
 
 
 //safe routes
@@ -22,6 +23,7 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(express.json()); //very important thing, allows to read json req.body
+app.use(cookieParser()); 
 
 //path to singup: /api/auth/signup
 app.use("/api/auth", authRoutes)
