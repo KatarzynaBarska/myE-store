@@ -2,6 +2,8 @@
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
 
+//schemat dla dla modelu usera w bibliotece Mongoose dla Node.js
+//Schemat Mongoose to konstrukcja danych w bazie danych MongoDB.
 const userSchema = mongoose.Schema({
     name: {
         type: String,
@@ -64,7 +66,7 @@ userSchema.methods.comparePassword = async function (password) {
     return await bcrypt.compare(password, this.password);
 };
 
-// utworzenie usera musi być na końcu pliku, żeby funkcja hashPassword działała
+// utworzenie modelu usera musi być na końcu pliku, żeby funkcja hashPassword działała
 const User = mongoose.model("User", userSchema);
 
 
