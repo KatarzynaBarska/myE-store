@@ -10,6 +10,8 @@ import cookieParser from "cookie-parser";
 
 //safe routes
 import authRoutes from "./routes/auth.route.js";
+import productRoutes from "./routes/product.route.js";
+
 
 import { connectDB } from "./lib/db.js"
 
@@ -27,6 +29,8 @@ app.use(cookieParser());
 
 //path to singup: /api/auth/signup
 app.use("/api/auth", authRoutes)
+app.use("/api/product", productRoutes)
+ 
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
